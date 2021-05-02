@@ -20,6 +20,8 @@ int getRand(int maxval){
 }
 
 int main(){
+    system("clear");
+
     int player;
     int game;
     int diff;
