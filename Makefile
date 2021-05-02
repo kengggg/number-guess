@@ -1,13 +1,12 @@
-CC=gcc
-CFLAGS=-I.
+CC = gcc
+CFLAGS = -I.
 
-ODIR=obj
+ODIR = obj
 
-LIBS=-lm
+DEPS = utils.h
 
-_OBJ = main.o
+_OBJ = main.o utils.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
-
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
@@ -18,4 +17,4 @@ main: $(OBJ)
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o *~
+	rm -f $(ODIR)/*.o

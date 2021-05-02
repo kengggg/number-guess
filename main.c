@@ -8,16 +8,8 @@
 #define MAX_RAND 9
 
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-
-
-int getRand(int maxval){
-    srand(time(NULL));
-    int r = rand() % 10;
-
-    return r;
-}
+#include "utils.h"
 
 int main(){
     system("clear");
@@ -46,12 +38,15 @@ int main(){
             printf(GRN "That's RIGHT!!! 😀😀😀\n\n");
         } else if (abs(diff) == 1) {
             printf(YEL "That's CLOSE!!!\n\n");
+            printGameOver();
             currentLife--;
         } else if (diff > 0) {
             printf(RED "That's too high!\n\n");
+            printGameOver();
             currentLife--;
         } else if (diff < 0) {
             printf(RED "That's too low\n\n");
+            printGameOver();
             currentLife--;
         }
 
@@ -61,8 +56,6 @@ int main(){
         }
 
     } while (player != game);
-
-    printf(RED "GAME OVER\n");
 
     return 0;
 }
