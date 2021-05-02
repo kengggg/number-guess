@@ -4,7 +4,7 @@
 #define WHT "\e[0;37m"
 #define CYN "\e[0;36m"
 
-#define MAX_LIFE 3
+#define MAX_LIFE 5
 #define MAX_RAND 9
 
 #include <stdio.h>
@@ -41,7 +41,7 @@ int main(){
         diff = player - game;
 
         if(player == game) {
-            printf(GRN "That's RIGHT!!!\n\n");
+            printf(GRN "That's RIGHT!!! 😀😀😀\n\n");
         } else if (abs(diff) == 1) {
             printf(YEL "That's CLOSE!!!\n\n");
             currentLife--;
