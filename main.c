@@ -38,20 +38,17 @@ int main(){
             printf(GRN "That's RIGHT!!! 😀😀😀\n\n");
         } else if (abs(diff) == 1) {
             printf(YEL "That's CLOSE!!!\n\n");
-            printGameOver();
             currentLife--;
         } else if (diff > 0) {
             printf(RED "That's too high!\n\n");
-            printGameOver();
             currentLife--;
         } else if (diff < 0) {
             printf(RED "That's too low\n\n");
-            printGameOver();
             currentLife--;
         }
 
         if(currentLife <= 0) {
-            printf(RED "SORRY NO LIFE REMAINS... 😭\n");
+            printGameOver();
             break;
         }
 

@@ -17,4 +17,5 @@ int getRand(int maxval){
 
 void printGameOver(void){
     printf(RED "GAME OVER 💀💀💀");
+    printf(RED "SORRY NO LIFE REMAINS... 😭\n");
 }
